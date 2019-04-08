@@ -1,0 +1,8 @@
+
+<% if @student.active == false
+    @student.update(active: true)
+else
+    @student.update(active: false)
+end %>
+
+<%= link_to "Go Back", student_path(@student) %>
