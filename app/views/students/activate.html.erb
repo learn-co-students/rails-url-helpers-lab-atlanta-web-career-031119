@@ -1,0 +1,10 @@
+<h1><%= @student.to_s %></h1>
+
+<h3>Update student'\s status</h3>
+
+<form action="activate_student_path" method="post">
+  <input type="radio" name="student[active]" value="true"> Active <br>
+  <input type="radio" name="student[active]" value="false"> Active <br>
+  <input type="submit" value="Update">
+
+</form>
