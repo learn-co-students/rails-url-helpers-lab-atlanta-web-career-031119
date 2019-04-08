@@ -1,1 +1,11 @@
 <h1><%= @student.to_s %></h1>
+
+<h2> Current Status: <% if @student.active == false %>
+                     <%= "This student is currently inactive." %>
+                     <% else %> <%= "This student is currently active." %> <% end %></h2>
+
+<form action="/students/<%= @student.id %>/activate" method="get">
+    <input type="submit" value="Click to Activate/Deactivate"><br>
+</form>
+<br><br>
+<a href="/students">Click here to return to the list of Students</a>
